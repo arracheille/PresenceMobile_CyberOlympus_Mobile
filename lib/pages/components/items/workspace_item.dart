@@ -31,10 +31,10 @@ class WorkspaceItem extends StatelessWidget {
     }
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => IndexWorkspace()),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => IndexWorkspace()),
+        // );
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

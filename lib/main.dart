@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_test/pages/attendance/location.dart';
 import 'package:project_test/pages/landing.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         // primarySwatch: Colors.blue,
       ),
+      // home: Location(),
       home: Landing(),
     );
   }

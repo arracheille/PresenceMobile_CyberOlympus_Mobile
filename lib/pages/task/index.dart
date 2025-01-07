@@ -47,10 +47,10 @@ class BoardTask extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => IndexWorkspace()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => IndexWorkspace()),
+                  // );
                 },
                 child: Container(
                   child: Row(

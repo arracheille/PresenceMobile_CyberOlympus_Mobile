@@ -1,27 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:project_test/pages/components/navprofile.dart';
 
-class Settings extends StatelessWidget {
+class BtnFullGradient extends StatelessWidget {
+  final VoidCallback? onTap;
+  final String text;
+  final Gradient gradient;
+
+  const BtnFullGradient({
+    Key? key,
+    this.onTap,
+    required this.text,
+    required this.gradient,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    DateTime now = DateTime.now();
-    String formattedDate = DateFormat('EEE, d MMM yyyy').format(now);
-    String formattedTime = DateFormat('HH:mm').format(now);
-    return Scaffold(
-      backgroundColor: Color(0xff05162b),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(40.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Navbar(
-              userName: 'Aqilla Rachel',
-              formattedDate: formattedDate,
-              formattedTime: formattedTime,
-            ),
-            SizedBox(height: 20),
-          ],
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.all(20.0),
+        decoration: BoxDecoration(
+          gradient: gradient,
+          borderRadius: BorderRadius.circular(5.0),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text,
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

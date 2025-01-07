@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_test/pages/attendance/location.dart';
 import 'package:project_test/pages/components/text/heading_3.dart';
 import 'package:project_test/pages/components/text/text.dart';
 import 'package:project_test/pages/components/text/text_small_10.dart';
@@ -48,7 +49,12 @@ class InOutItem extends StatelessWidget {
                   color: Colors.transparent,
                   child: InkWell(
                     borderRadius: BorderRadius.circular(5.0),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Location()),
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10.0, vertical: 5.0),

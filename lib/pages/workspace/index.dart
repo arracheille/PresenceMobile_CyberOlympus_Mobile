@@ -7,7 +7,8 @@ import 'package:project_test/pages/workspace/dashboard.dart';
 import 'package:project_test/pages/workspace/settings.dart';
 
 class IndexWorkspace extends StatefulWidget {
-  const IndexWorkspace({Key? key}) : super(key: key);
+  final int id;
+  const IndexWorkspace({Key? key, required this.id}) : super(key: key);
 
   @override
   State<IndexWorkspace> createState() => _IndexWorkspaceState();
@@ -25,6 +26,7 @@ class _IndexWorkspaceState extends State<IndexWorkspace> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget.id);
     return Scaffold(
       body: Center(
         child: body[_currentIndex],

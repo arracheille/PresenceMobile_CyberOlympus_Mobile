@@ -11,17 +11,33 @@ class ApiService {
     try {
       final response =
           await http.get(Uri.parse(baseUrl + '/api/users'), headers: {
-        'Content-type': 'aplication/json',
+        'Content-type': 'application/json',
         // 'Authorization': 'Bearer ${userToken}',
       });
       if (response.statusCode == 200) {
-      // print(response);
-      final responseData = jsonDecode(response.body);
-      return {'success': true, 'data': responseData};
+        // print(response);
+        final responseData = jsonDecode(response.body);
+        return {'success': true, 'data': responseData};
+      }
+    } catch (e) {
+      print('Error occured: $e');
+    }
+  }
+
+  getWorkspace() async {
+    try {
+      final response =
+          await http.get(Uri.parse(baseUrl + '/api/workspaces'), headers: {
+        'Content-type': 'application/json',
+        // 'Authorization': 'Bearer ${userToken}',
+      });
+      if (response.statusCode == 200) {
+        // print(response);
+        final responseData = jsonDecode(response.body);
+        return {'success': true, 'data': responseData};
       }
     } catch (e) {
       print('Error occured: $e');
     }
   }
 }
-// 

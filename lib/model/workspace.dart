@@ -37,15 +37,15 @@ class Workspace {
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "title": title,
-        "type": type,
-        "description": description,
-        "user_id": userId,
-        "unique_id": uniqueId,
-        "email": email,
-        "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
-        "deleted_at": deletedAt.toIso8601String(),
-      };
+    "id": id,
+    "title": title,
+    "type": type,
+    "description": description,
+    "user_id": userId,
+    "unique_id": uniqueId,
+    "email": email,
+    "created_at": createdAt.toIso8601String(),
+    "updated_at": updatedAt.toIso8601String(),
+    "deleted_at": deletedAt.toIso8601String(),
+  };
 }

@@ -3,7 +3,6 @@ import 'package:project_test/pages/components/dashboard/index_attendance_records
 import 'package:project_test/pages/components/dashboard/attendance_in_out.dart';
 import 'package:project_test/pages/components/navprofile.dart';
 import 'package:intl/intl.dart';
-import 'package:project_test/root/root.dart';
 
 class Attendance extends StatelessWidget {
   @override

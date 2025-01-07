@@ -21,6 +21,7 @@ class _SigninState extends State<Signin> {
     });
 
     final String apiUrl = 'http://192.168.100.99:8001/api/login';
+    // final String apiUrl = 'http://10.0.2.2:8000/api/login';
     final response = await http.post(
       Uri.parse(apiUrl),
       headers: <String, String>{
@@ -30,7 +31,7 @@ class _SigninState extends State<Signin> {
         'email': emailController.text,
         'password': passwordController.text,
       }),
-    );
+    ); 
 
     setState(() {
       isLoading = false;
